@@ -1,25 +1,28 @@
 import data from '.././MovieData.json';
+import styles from '.././Home.module.css';
 
 const md = data.MovieData;
 
 function Movies() {
   return (
     <>
-      <div>
+      <div className={styles.tablehead}>
+        <br></br>
+        <br></br>
         <h3>Joel Hilton's Movie Collection</h3>
       </div>
 
       {/* Table for the movies */}
       <div>
-        <table className="table">
+        <table className={styles.table}>
           <thead>
             <tr>
-              <th>Title</th>
-              <th>Year</th>
-              <th>Director</th>
-              <th>Rating</th>
-              <th>Category</th>
-              <th>Edited</th>
+              <th className={styles.th}>Title</th>
+              <th className={styles.th}>Year</th>
+              <th className={styles.th}>Director</th>
+              <th className={styles.th}>Rating</th>
+              <th className={styles.th}>Category</th>
+              <th className={styles.th}>Edited</th>
             </tr>
           </thead>
           {/* inserting the data for each entry */}

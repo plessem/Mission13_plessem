@@ -1,34 +1,25 @@
 import React from 'react';
+import styles from './Navbar.module.css';
 
 // creating the navigation bar for the website
 function Navbar() {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <ul class="navbar-brand">Joel Hilton's Movies</ul>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">
+    <nav class="navbar navbar-light background-color: #e3f2fd">
+      <h3 className={styles.title}>Joel Hilton's Movies</h3>
+
+      <ul className={styles.ul}>
+        <li className={styles.li}>
+          <a className={styles.link} href="/">
             Home
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/Podcast">
+        <li className={styles.li}>
+          <a className={styles.link} href="/Podcast">
             Podcast
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/Movies">
+        <li className={styles.li}>
+          <a className={styles.link} href="/Movies">
             Movie List
           </a>
         </li>
