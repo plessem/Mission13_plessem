@@ -1,8 +1,8 @@
-import data from './MovieData.json';
+import data from '.././MovieData.json';
 
 const md = data.MovieData;
 
-function MovieList() {
+function Movies() {
   return (
     <>
       <div>
@@ -41,4 +41,4 @@ function MovieList() {
   );
 }
 
-export default MovieList;
+export default Movies;
