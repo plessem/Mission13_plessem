@@ -18,10 +18,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-    // <div className="App">
-    //   <TopBanner />
-    //   <MovieList />
-    // </div>
   );
 }
 

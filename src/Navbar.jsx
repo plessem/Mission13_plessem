@@ -1,18 +1,36 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
 
+// creating the navigation bar for the website
 function Navbar() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <ul class="navbar-brand">Joel Hilton's Movies</ul>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">
+            Home
+          </a>
         </li>
-        <li>
-          <Link to="/Podcast">Podcast</Link>
+        <li class="nav-item">
+          <a class="nav-link" href="/Podcast">
+            Podcast
+          </a>
         </li>
-        <li>
-          <Link to="/Movies">Movie List</Link>
+        <li class="nav-item">
+          <a class="nav-link" href="/Movies">
+            Movie List
+          </a>
         </li>
       </ul>
     </nav>
