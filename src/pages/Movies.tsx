@@ -1,25 +1,27 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Movie } from '../types/movie';
 // getting the type of movie
 
 function Movies() {
   const [movieData, setMovieData] = useState<Movie[]>([]);
 
-  // getting the data to load in
-  const fetchMovie = async () => {
-    const rsp = await fetch('https://localhost:4000/movie');
-    const temp = await rsp.json();
-    setMovieData(temp);
-  };
-
-  fetchMovie();
+  //only update if there are changes, else return an empty set
+  useEffect(() => {
+    // getting the data to load in
+    const fetchMovie = async () => {
+      const rsp = await fetch('https://localhost:4000/movie');
+      const temp = await rsp.json();
+      setMovieData(temp);
+    };
+    fetchMovie();
+  }, []);
 
   return (
     <>
       <div className="row">
         <h4>Joel Hilton's Movie List</h4>
       </div>
-      <table>
+      <table className="table table-bordered">
         <thead>
           <tr>
             <th>Category</th>
